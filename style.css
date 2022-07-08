@@ -1,0 +1,164 @@
+/* ============= GENERAL ============= */
+
+:root {
+  --hue: 240;
+
+  --body-bg-color: hsl(var(--hue), 5%, 7%);
+  --text-color: hsl(var(--hue), 9%, 89%);
+  --title-color: hsl(calc(var(--hue) - 93), 96%, 42%);
+  --form-color: hsl(calc(var(--hue) - 240), 0%, 66%);
+  --bg-button-color: hsl(calc(var(--hue) + 18), 73%, 62%);
+
+  font-size: 62.5%; /* 1rem = 10px*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+
+  font-family: 'League Spartan';
+  font-size: 1.6rem;
+
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas: 'A B';
+  grid-template-columns: 50% 50%;
+}
+
+.column-A {
+  grid-area: A;
+  z-index: 100;
+
+  height: 100vh;
+  background-color: var(--body-bg-color);
+}
+
+.column-B {
+  grid-area: B;
+}
+
+/* ============= COLUMN-A ============= */
+
+.column-A a {
+  position: absolute;
+  z-index: 200;
+
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+.column-A .information {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.9rem;
+
+  z-index: 300;
+
+  margin: 23.6rem 3.7rem 5rem 3.6rem;
+}
+
+.column-A .information h2 {
+  color: var(--title-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.column-A .information h5 {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.column-A .information p {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+.column-A form fieldset {
+  border: 0;
+  margin-left: 3.6rem;
+}
+
+.column-A form fieldset legend {
+  color: var(--form-color);
+  margin-bottom: 1.7rem;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+.column-A form fieldset .form {
+  display: flex;
+  flex-direction: line;
+}
+
+.column-A form fieldset .form p {
+  width: 0.5rem;
+  height: 4.8rem;
+  background-color: var(--title-color);
+}
+
+.column-A form fieldset .form input {
+  width: 74.5rem;
+  height: 4.8rem;
+
+  padding-left: 1rem;
+}
+
+.column-A form fieldset .form input ::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.column-A form fieldset .form button {
+  border: none;
+  height: 4.8rem;
+}
+
+.column-A .link a {
+  display: flex;
+  flex-direction: line;
+  align-items: left;
+  gap: 0.5rem;
+
+  color: var(--bg-button-color);
+  text-decoration: none;
+
+  margin-left: 3.6rem;
+}
+
+.column-A .link a h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  margin-top: 0.2rem;
+}
+
+/* ============= COLUMN-B ============= */
+
+.column-B .wrapper img {
+  position: relative;
+
+  left: -36rem;
+
+  height: 100vh;
+}
